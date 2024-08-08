@@ -12,7 +12,7 @@ const Main = () => {
       <div className="main-container">
         <div className="greet">
           <p>
-            <span>Hello, human.</span>
+            <span>Hello, Juddy.</span>
           </p>
           <p>How can I assist you today?</p>
         </div>
