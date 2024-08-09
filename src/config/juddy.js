@@ -1,8 +1,8 @@
-const {
+import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
-} = require('@google/generative-ai')
+} from '@google/generative-ai'
 
 const MODEL_NAME = 'gemini-1.0-pro'
 const API_KEY = 'AIzaSyCmvJFOodepc1ptLR9nxrDyrORjovn7xvQ'
