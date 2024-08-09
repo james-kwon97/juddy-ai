@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>JuddyAI</p>
+        <p>Juddy</p>
         <img src={assets.user_icons} alt="" />
       </div>
       <div className="main-container">
@@ -38,7 +38,7 @@ const Main = () => {
         </div>
         <div className="main-bottom">
           <div className="search-box">
-            <input type="text" placeholder="Enter a prompt here" />
+            <input type="text" placeholder="Ask Juddy anything" />
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
@@ -46,7 +46,7 @@ const Main = () => {
             </div>
           </div>
           <p className="bottom-info">
-            JuddyAI delivers, but verify the details that matter most.
+            Juddy delivers, but verify the details that matter most.
           </p>
         </div>
       </div>
