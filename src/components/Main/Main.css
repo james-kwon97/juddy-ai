@@ -147,3 +147,10 @@
   align-items: start;
   gap: 20px;
 }
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
