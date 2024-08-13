@@ -27,16 +27,30 @@
 .main .greet {
   margin: 50px 0px;
   font-size: 56px;
-  color: #c4c7c5;
+  color: #3498db;
   font-weight: 500;
   padding: 20px;
 }
 
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .main .greet span {
-  background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  background: -webkit-linear-gradient(16deg, #74b9ff, #ff7675, #f9ca24);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: waveAnimation 3s ease-in-out infinite;
 }
 
 .main .cards {
