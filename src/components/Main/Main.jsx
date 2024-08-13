@@ -20,6 +20,11 @@ const Main = () => {
     }
   }
 
+  const handleCardClick = (suggestion) => {
+    setInput(suggestion)
+    onSent(suggestion)
+  }
+
   return (
     <div className="main">
       <div className="nav">
@@ -36,19 +41,45 @@ const Main = () => {
               <p>How can I assist you today?</p>
             </div>
             <div className="cards">
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    'Suggest beautiful places to see on an upcoming road trip'
+                  )
+                }
+              >
                 <p>Suggest beautiful places to see on an upcoming road trip</p>
                 <img src={assets.compass_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick('Recommend the best books to read this year')
+                }
+              >
                 <p>Recommend the best books to read this year</p>
                 <img src={assets.bulb_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    'Provide a list of healthy recipes for a week'
+                  )
+                }
+              >
                 <p>Provide a list of healthy recipes for a week</p>
                 <img src={assets.message_icon} alt="" />
               </div>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() =>
+                  handleCardClick(
+                    'Give tips on how to improve productivity while working from home'
+                  )
+                }
+              >
                 <p>
                   Give tips on how to improve productivity while working from
                   home
