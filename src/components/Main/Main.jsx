@@ -32,7 +32,7 @@ const Main = () => {
         <p onClick={newChat} style={{ cursor: 'pointer' }}>
           Juddy
         </p>
-        <img src={assets.user_icons} alt="" />
+        <img src={assets.user_icons} alt="User profile icon" />
       </div>
       <div className="main-container">
         {!showResult ? (
@@ -53,7 +53,10 @@ const Main = () => {
                 }
               >
                 <p>Suggest beautiful places to see on an upcoming road trip</p>
-                <img src={assets.compass_icon} alt="" />
+                <img
+                  src={assets.compass_icon}
+                  alt="Compass icon representing travel suggestions"
+                />
               </div>
               <div
                 className="card"
@@ -62,7 +65,10 @@ const Main = () => {
                 }
               >
                 <p>Recommend the best books to read this year</p>
-                <img src={assets.bulb_icon} alt="" />
+                <img
+                  src={assets.bulb_icon}
+                  alt="Light bulb icon representing book recommendations"
+                />
               </div>
               <div
                 className="card"
@@ -73,7 +79,10 @@ const Main = () => {
                 }
               >
                 <p>Provide a list of healthy recipes for a week</p>
-                <img src={assets.message_icon} alt="" />
+                <img
+                  src={assets.message_icon}
+                  alt="Message icon representing recipe suggestions"
+                />
               </div>
               <div
                 className="card"
@@ -87,18 +96,24 @@ const Main = () => {
                   Give tips on how to improve productivity while working from
                   home
                 </p>
-                <img src={assets.code_icon} alt="" />
+                <img
+                  src={assets.code_icon}
+                  alt="Code icon representing productivity tips"
+                />
               </div>
             </div>
           </>
         ) : (
           <div className="result">
             <div className="result-title">
-              <img src={assets.user_icons} alt="" />
+              <img src={assets.user_icons} alt="User profile icon" />
               <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
-              <img src={assets.gemini_icon} alt="" />
+              <img
+                src={assets.gemini_icon}
+                alt="Gemini icon representing Juddy's response"
+              />
               {loading ? (
                 <div className="loader">
                   <hr />
@@ -122,10 +137,20 @@ const Main = () => {
               onKeyDown={handleKeyPress}
             />
             <div>
-              <img src={assets.gallery_icon} alt="" />
-              <img src={assets.mic_icon} alt="" />
+              <img
+                src={assets.gallery_icon}
+                alt="Gallery icon for attaching images"
+              />
+              <img
+                src={assets.mic_icon}
+                alt="Microphone icon for voice input"
+              />
               {input ? (
-                <img onClick={() => onSent()} src={assets.send_icon} alt="" />
+                <img
+                  onClick={() => onSent()}
+                  src={assets.send_icon}
+                  alt="Send icon to submit your input"
+                />
               ) : null}
             </div>
           </div>
