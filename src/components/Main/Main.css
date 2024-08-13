@@ -26,10 +26,18 @@
 
 .main .greet {
   margin: 50px 0px;
-  font-size: 56px;
-  color: #3498db;
+  font-size: 64px;
   font-weight: 500;
   padding: 20px;
+  text-align: center;
+}
+
+.greet-subtext {
+  font-size: 56px;
+  color: #a0b0b9;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
 }
 
 @keyframes waveAnimation {
