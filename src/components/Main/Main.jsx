@@ -39,9 +39,9 @@ const Main = () => {
           <>
             <div className="greet">
               <p>
-                <span>Hello, Juddy.</span>
+                <span>Hello, I'm Juddy.</span>
               </p>
-              <p>How can I assist you today?</p>
+              <p>How can I help you today?</p>
             </div>
             <div className="cards">
               <div
