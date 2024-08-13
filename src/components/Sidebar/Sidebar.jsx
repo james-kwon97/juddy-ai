@@ -20,10 +20,10 @@ const Sidebar = () => {
           onClick={() => setExtended((prev) => !prev)}
           className="menu"
           src={assets.menu_icon}
-          alt=""
+          alt="Menu icon to toggle sidebar"
         />
         <div onClick={() => newChat()} className="new-chat">
-          <img src={assets.plus_icon} alt="" />
+          <img src={assets.plus_icon} alt="Plus icon to start a new chat" />
           {extended ? <p>New Chat</p> : null}
         </div>
         {extended ? (
@@ -36,7 +36,10 @@ const Sidebar = () => {
                   className="recent-entry"
                   key={index}
                 >
-                  <img src={assets.message_icon} alt="" />
+                  <img
+                    src={assets.message_icon}
+                    alt="Message icon representing a recent prompt"
+                  />
                   <p>{item.slice(0, 18)}..</p>
                 </div>
               )
@@ -46,15 +49,21 @@ const Sidebar = () => {
       </div>
       <div className="bottom">
         <div className="bottom-item recent-entry">
-          <img src={assets.question_icon} alt="" />
+          <img
+            src={assets.question_icon}
+            alt="Question mark icon for help section"
+          />
           {extended ? <p>Help</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.history_icon} alt="" />
+          <img
+            src={assets.history_icon}
+            alt="History icon for viewing recent activities"
+          />
           {extended ? <p>Activities</p> : null}
         </div>
         <div className="bottom-item recent-entry">
-          <img src={assets.setting_icon} alt="" />
+          <img src={assets.setting_icon} alt="Gear icon for settings" />
           {extended ? <p>Settings</p> : null}
         </div>
       </div>
