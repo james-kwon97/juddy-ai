@@ -12,6 +12,7 @@ const Main = () => {
     resultData,
     setInput,
     input,
+    newChat,
   } = useContext(Context)
 
   const handleKeyPress = (e) => {
@@ -28,7 +29,9 @@ const Main = () => {
   return (
     <div className="main">
       <div className="nav">
-        <p>Juddy</p>
+        <p onClick={newChat} style={{ cursor: 'pointer' }}>
+          Juddy
+        </p>
         <img src={assets.user_icons} alt="" />
       </div>
       <div className="main-container">
