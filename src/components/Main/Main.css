@@ -9,13 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 22px;
+  font-size: 25px;
   padding: 20px;
   color: #585858;
 }
 
 .main .nav img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .result img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
 }
 
