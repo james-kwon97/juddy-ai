@@ -116,9 +116,12 @@ const Main = () => {
               />
               {loading ? (
                 <div className="loader">
-                  <hr />
-                  <hr />
-                  <hr />
+                  <div className="loader-orbit">
+                    <div className="loader-dot"></div>
+                  </div>
+                  <div className="loader-orbit">
+                    <div className="loader-dot"></div>
+                  </div>
                 </div>
               ) : (
                 <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
