@@ -41,7 +41,7 @@ const Main = () => {
               <p>
                 <span>Hello, I'm Juddy :)</span>
               </p>
-              <p className="greet-subtext">How can I help you today?</p>
+              <p className="greet-subtext">How can I assist you today?</p>
             </div>
             <div className="cards">
               <div

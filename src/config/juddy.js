@@ -4,7 +4,7 @@ import {
   HarmBlockThreshold,
 } from '@google/generative-ai'
 
-const MODEL_NAME = 'gemini-1.0-pro'
+const MODEL_NAME = 'gemini-1.5-flash'
 const API_KEY = 'AIzaSyCmvJFOodepc1ptLR9nxrDyrORjovn7xvQ'
 
 async function runChat(prompt) {
@@ -12,10 +12,11 @@ async function runChat(prompt) {
   const model = genAI.getGenerativeModel({ model: MODEL_NAME })
 
   const generationConfig = {
-    temperature: 0.9,
-    topK: 1,
-    topP: 1,
-    maxOutputTokens: 2048,
+    temperature: 1,
+    topK: 64,
+    topP: 0.95,
+    maxOutputTokens: 8192,
+    responseMimeType: 'text/plain',
   }
 
   const safetySettings = [
