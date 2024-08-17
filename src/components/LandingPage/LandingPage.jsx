@@ -21,7 +21,7 @@ const LandingPage = () => {
           <p>
             <span>Welcome to Juddy AI</span>
           </p>
-          <p className="greet-subtext">Your AI assistant is ready to help</p>
+          <p className="greet-subtext">Please sign in to continue</p>
         </div>
         <div className="auth-buttons">
           <SignedOut>
