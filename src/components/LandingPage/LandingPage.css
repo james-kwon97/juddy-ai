@@ -40,22 +40,17 @@
   text-align: center;
 }
 
-.sign-in-button {
+.auth-buttons {
   display: flex;
   justify-content: center;
+  gap: 20px; /* Adds space between Log In and Sign Up buttons */
   margin-top: 30px;
 }
 
-.sign-in-button button {
-  padding: 14px 28px; /* Increased padding for a larger button */
-  font-size: 24px; /* Larger font size for more prominence */
+.auth-buttons button {
+  padding: 14px 28px; /* Balanced padding for a larger button */
+  font-size: 24px; /* Larger font size for prominence */
   cursor: pointer;
-  background: linear-gradient(
-    135deg,
-    #74b9ff,
-    #a29bfe,
-    #ff7675
-  ); /* Vibrant gradient */
   border: none;
   border-radius: 50px; /* Rounded for a modern look */
   color: white; /* White text for high contrast */
@@ -63,7 +58,16 @@
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Soft, diffused shadow */
 }
 
-.sign-in-button button:hover {
+.auth-buttons .log-in {
+  background: linear-gradient(
+    135deg,
+    #74b9ff,
+    #a29bfe,
+    #ff7675
+  ); /* Gradient for Log In button */
+}
+
+.auth-buttons .log-in:hover {
   background: linear-gradient(
     135deg,
     #a29bfe,
@@ -74,18 +78,32 @@
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-.sign-in-button button:active {
+.auth-buttons .sign-up {
   background: linear-gradient(
     135deg,
     #ff7675,
     #74b9ff,
     #a29bfe
-  ); /* Altered gradient on active */
+  ); /* Gradient for Sign Up button */
+}
+
+.auth-buttons .sign-up:hover {
+  background: linear-gradient(
+    135deg,
+    #74b9ff,
+    #a29bfe,
+    #ff7675
+  ); /* Reversed gradient on hover */
+  transform: translateY(-4px); /* Slight lift effect on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.auth-buttons button:active {
   transform: translateY(2px); /* Slight press down effect */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
 }
 
-.sign-in-button button:focus {
+.auth-buttons button:focus {
   outline: none;
   border: 2px solid rgba(255, 118, 117, 0.5); /* Soft red outline on focus */
   box-shadow: 0px 0px 10px rgba(255, 118, 117, 0.5); /* Glow effect on focus */
