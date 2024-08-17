@@ -15,11 +15,20 @@ const LandingPage = () => {
   }, [isSignedIn, navigate])
 
   return (
-    <div className="landing-container">
-      <h1 className="landing-title">Welcome to Juddy AI</h1>
-      <SignedOut>
-        <SignInButton mode="modal" />
-      </SignedOut>
+    <div className="landing-page">
+      <div className="landing-container">
+        <div className="greet">
+          <p>
+            <span>Welcome to Juddy AI</span>
+          </p>
+          <p className="greet-subtext">Your AI assistant is ready to help</p>
+        </div>
+        <div className="sign-in-button">
+          <SignedOut>
+            <SignInButton mode="modal" />
+          </SignedOut>
+        </div>
+      </div>
     </div>
   )
 }

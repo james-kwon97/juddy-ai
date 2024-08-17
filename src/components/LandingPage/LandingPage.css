@@ -1,0 +1,69 @@
+.landing-page {
+  flex: 1;
+  min-height: 100vh;
+  padding-bottom: 15vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-top: 80px; /* Adjust this value to match the main page */
+}
+
+.greet {
+  margin: 50px 0px;
+  font-size: 64px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+}
+
+.greet span {
+  background: -webkit-linear-gradient(16deg, #74b9ff, #ff7675, #f9ca24);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: waveAnimation 3s ease-in-out infinite;
+}
+
+.greet-subtext {
+  font-size: 56px;
+  color: #a0b0b9;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sign-in-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .greet {
+    font-size: 48px;
+  }
+
+  .greet-subtext {
+    font-size: 36px;
+  }
+}
