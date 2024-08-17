@@ -10,6 +10,9 @@ import {
 const App = () => {
   return (
     <>
+      <Sidebar />
+      <Main />
+
       <header>
         <SignedOut>
           <SignInButton />
@@ -18,8 +21,6 @@ const App = () => {
           <UserButton />
         </SignedIn>
       </header>
-      <Sidebar />
-      <Main />
     </>
   )
 }
