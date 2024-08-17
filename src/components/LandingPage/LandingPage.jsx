@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAuth } from '@clerk/clerk-react'
 import { useNavigate } from 'react-router-dom'
-import { SignedOut, SignInButton } from '@clerk/clerk-react'
+import { SignedOut, SignInButton, SignUpButton } from '@clerk/clerk-react' // Import SignUpButton
 import './LandingPage.css'
 
 const LandingPage = () => {
@@ -23,9 +23,14 @@ const LandingPage = () => {
           </p>
           <p className="greet-subtext">Your AI assistant is ready to help</p>
         </div>
-        <div className="sign-in-button">
+        <div className="auth-buttons">
           <SignedOut>
-            <SignInButton mode="modal" />
+            <SignInButton mode="modal">
+              <button className="log-in">Log In</button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <button className="sign-up">Sign Up</button>
+            </SignUpButton>
           </SignedOut>
         </div>
       </div>
