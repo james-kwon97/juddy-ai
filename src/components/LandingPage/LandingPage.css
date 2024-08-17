@@ -1,0 +1,132 @@
+.landing-page {
+  flex: 1;
+  min-height: 100vh;
+  padding-bottom: 15vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-top: 80px; /* Adjust this value to match the main page */
+}
+
+.greet {
+  margin: 50px 0px;
+  font-size: 64px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+}
+
+.greet span {
+  background: -webkit-linear-gradient(16deg, #74b9ff, #ff7675, #f9ca24);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: waveAnimation 3s ease-in-out infinite;
+}
+
+.greet-subtext {
+  font-size: 56px;
+  color: #a0b0b9;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between Log In and Sign Up buttons */
+  margin-top: 30px;
+}
+
+.auth-buttons button {
+  padding: 14px 28px; /* Balanced padding for a larger button */
+  font-size: 24px; /* Larger font size for prominence */
+  cursor: pointer;
+  border: none;
+  border-radius: 50px; /* Rounded for a modern look */
+  color: white; /* White text for high contrast */
+  transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Soft, diffused shadow */
+}
+
+.auth-buttons .log-in {
+  background: linear-gradient(
+    135deg,
+    #74b9ff,
+    #a29bfe,
+    #ff7675
+  ); /* Gradient for Log In button */
+}
+
+.auth-buttons .log-in:hover {
+  background: linear-gradient(
+    135deg,
+    #a29bfe,
+    #ff7675,
+    #74b9ff
+  ); /* Reversed gradient on hover */
+  transform: translateY(-4px); /* Slight lift effect on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.auth-buttons .sign-up {
+  background: linear-gradient(
+    135deg,
+    #ff7675,
+    #74b9ff,
+    #a29bfe
+  ); /* Gradient for Sign Up button */
+}
+
+.auth-buttons .sign-up:hover {
+  background: linear-gradient(
+    135deg,
+    #74b9ff,
+    #a29bfe,
+    #ff7675
+  ); /* Reversed gradient on hover */
+  transform: translateY(-4px); /* Slight lift effect on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.auth-buttons button:active {
+  transform: translateY(2px); /* Slight press down effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+}
+
+.auth-buttons button:focus {
+  outline: none;
+  border: 2px solid rgba(255, 118, 117, 0.5); /* Soft red outline on focus */
+  box-shadow: 0px 0px 10px rgba(255, 118, 117, 0.5); /* Glow effect on focus */
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .greet {
+    font-size: 48px;
+  }
+
+  .greet-subtext {
+    font-size: 36px;
+  }
+}
