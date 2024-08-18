@@ -21,9 +21,6 @@ const App = () => {
               <>
                 <Sidebar />
                 <Main />
-                <header>
-                  <UserButton />
-                </header>
               </>
             </SignedIn>
           }
