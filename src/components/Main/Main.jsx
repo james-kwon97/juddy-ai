@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
+import { UserButton } from '@clerk/clerk-react'
 
 const Main = () => {
   const {
@@ -32,7 +33,8 @@ const Main = () => {
         <p onClick={newChat} style={{ cursor: 'pointer' }}>
           Juddy
         </p>
-        <img src={assets.user_icons} alt="User profile icon" />
+        {/* <img src={assets.user_icons} alt="User profile icon" /> */}
+        <UserButton />
       </div>
       <div className="main-container">
         {!showResult ? (
