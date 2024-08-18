@@ -111,8 +111,8 @@ const Main = () => {
             </div>
             <div className="result-data">
               <img
-                src={assets.ai_icon}
-                alt="Gemini icon representing Juddy's response"
+                src={assets.user_icons}
+                alt="Cute cat icon representing Juddy's response"
               />
               {loading ? (
                 <div className="loader">
