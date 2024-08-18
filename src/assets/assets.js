@@ -11,7 +11,7 @@ import youtube_icon from './youtube_icon.png'
 import message_icon from './message_icon.png'
 import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
-import ai_icon from './ai_icon.jpeg'
+import user_icon from './user_icon.png'
 import user_icons from './user_icons.png'
 
 export const assets = {
@@ -28,6 +28,6 @@ export const assets = {
   message_icon,
   code_icon,
   send_icon,
-  ai_icon,
+  user_icon,
   user_icons,
 }

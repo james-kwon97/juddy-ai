@@ -107,7 +107,7 @@ const Main = () => {
         ) : (
           <div className="result">
             <div className="result-title">
-              <UserButton className="static-user-icon" />
+              <img src={assets.user_icon} alt="User profile icon" />
               <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
