@@ -33,7 +33,6 @@ const Main = () => {
         <p onClick={newChat} style={{ cursor: 'pointer' }}>
           Juddy
         </p>
-        {/* <img src={assets.user_icons} alt="User profile icon" /> */}
         <UserButton />
       </div>
       <div className="main-container">
@@ -108,7 +107,7 @@ const Main = () => {
         ) : (
           <div className="result">
             <div className="result-title">
-              <img src={assets.user_icons} alt="User profile icon" />
+              <UserButton className="static-user-icon" />
               <p>{recentPrompt}</p>
             </div>
             <div className="result-data">
