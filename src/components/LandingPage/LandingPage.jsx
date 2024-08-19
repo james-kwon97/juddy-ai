@@ -16,6 +16,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      <div className="logo">Juddy AI</div>
       <div className="landing-container">
         <div className="greet">
           <p>
