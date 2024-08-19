@@ -18,7 +18,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <div className="left-section">
         <p className="logo">Juddy AI</p>
-        {/* Add the image here */}
+        {/* Adding my image here */}
       </div>
       <div className="right-section">
         <div className="greet">
