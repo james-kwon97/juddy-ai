@@ -16,8 +16,11 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <div className="logo">Juddy AI</div>
-      <div className="landing-container">
+      <div className="left-section">
+        <p className="logo">Juddy AI</p>
+        {/* Add the image here */}
+      </div>
+      <div className="right-section">
         <div className="greet">
           <p>
             <span>Welcome to Juddy AI</span>
