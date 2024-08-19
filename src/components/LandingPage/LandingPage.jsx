@@ -3,6 +3,7 @@ import { useAuth } from '@clerk/clerk-react'
 import { useNavigate } from 'react-router-dom'
 import { SignedOut, SignInButton, SignUpButton } from '@clerk/clerk-react' // Import SignUpButton
 import './LandingPage.css'
+import { assets } from '../../assets/assets'
 
 const LandingPage = () => {
   const { isSignedIn } = useAuth()
@@ -18,7 +19,11 @@ const LandingPage = () => {
     <div className="landing-page">
       <div className="left-section">
         <p className="logo">Juddy AI</p>
-        {/* Adding my image here */}
+        <img
+          src={assets.plant_icon}
+          alt="Plant image"
+          className="landing-image"
+        />
       </div>
       <div className="right-section">
         <div className="greet">
