@@ -27,13 +27,22 @@ const Main = () => {
     onSent(suggestion)
   }
 
+  const userButtonAppearance = {
+    elements: {
+      userButtonAvatarBox: {
+        width: '35px',
+        height: '35px',
+      },
+    },
+  }
+
   return (
     <div className="main">
       <div className="nav">
         <p onClick={newChat} style={{ cursor: 'pointer' }}>
           Juddy
         </p>
-        <UserButton />
+        <UserButton appearance={userButtonAppearance} />
       </div>
       <div className="main-container">
         {!showResult ? (
