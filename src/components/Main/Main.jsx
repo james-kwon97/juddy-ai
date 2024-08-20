@@ -151,20 +151,10 @@ const Main = () => {
             />
             <div>
               <img
-                src={assets.gallery_icon}
-                alt="Gallery icon for attaching images"
+                onClick={() => onSent()}
+                src={assets.send_icon}
+                alt="Send icon to submit your input"
               />
-              <img
-                src={assets.mic_icon}
-                alt="Microphone icon for voice input"
-              />
-              {input ? (
-                <img
-                  onClick={() => onSent()}
-                  src={assets.send_icon}
-                  alt="Send icon to submit your input"
-                />
-              ) : null}
             </div>
           </div>
           <p className="bottom-info">
