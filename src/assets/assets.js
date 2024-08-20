@@ -13,6 +13,7 @@ import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
 import user_icon from './user_icon.png'
 import user_icons from './user_icons.png'
+import plant_icon from './plant_icon.jpeg'
 
 export const assets = {
   history_icon,
@@ -30,4 +31,5 @@ export const assets = {
   send_icon,
   user_icon,
   user_icons,
+  plant_icon,
 }
