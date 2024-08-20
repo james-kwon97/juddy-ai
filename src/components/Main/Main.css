@@ -159,13 +159,20 @@
   gap: 20px;
 }
 
+.result-title p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
 .result img {
   width: 50px;
 }
 
 .result-data {
+  margin: 40px 0px;
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 20px;
 }
 
