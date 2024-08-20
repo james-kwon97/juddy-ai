@@ -1,40 +1,17 @@
 .landing-page {
-  display: flex;
+  position: relative;
   height: 100vh;
+  width: 100vw;
   background-color: white;
-}
-
-.left-section,
-.right-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .left-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-left: 20px;
-}
-
-.landing-image {
   position: absolute;
-  left: 11.6666667%;
-  width: 516px;
-  height: 542px;
-  flex-shrink: 0;
-  border-radius: 30px;
-}
-
-@media (max-width: 768px) {
-  .landing-image {
-    width: 80%;
-    height: auto;
-    max-width: 516px; /* Limits the width to 516px */
-  }
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
 }
 
 .logo {
@@ -47,12 +24,32 @@
   line-height: 140%;
 }
 
-.right-section {
-  padding: 40px;
+.landing-image {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 516px;
+  height: 542px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.right-half {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align items to the left */
+  align-items: center;
+  padding: 40px;
+}
+
+.content {
+  max-width: 80%;
 }
 
 .greet {
@@ -135,12 +132,55 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+  .landing-image {
+    width: 80%;
+    height: auto;
+    left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .left-section,
+  .right-half {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .landing-image {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 80%;
+    max-width: 516px;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center;
+  }
+
   .greet {
-    font-size: 48px;
+    font-size: 36px;
+    text-align: center;
   }
 
   .greet-subtext {
-    font-size: 36px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .auth-buttons {
+    justify-content: center;
   }
 }
