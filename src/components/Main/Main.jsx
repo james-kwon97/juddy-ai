@@ -47,11 +47,11 @@ const Main = () => {
       <div className="main-container">
         {!showResult ? (
           <>
-            <div className="greet">
+            <div className="main-greet">
               <p>
                 <span>Hello, I'm Juddy :)</span>
               </p>
-              <p className="greet-subtext">How can I assist you today?</p>
+              <p className="main-greet-subtext">How can I assist you today?</p>
             </div>
             <div className="cards">
               <div

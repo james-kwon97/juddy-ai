@@ -24,7 +24,7 @@
   margin: auto;
 }
 
-.main .greet {
+.main .main-greet {
   margin: 50px 0px;
   font-size: 64px;
   font-weight: 500;
@@ -32,7 +32,7 @@
   text-align: center;
 }
 
-.greet-subtext {
+.main-greet-subtext {
   font-size: 56px;
   color: #a0b0b9;
   font-weight: 400;
@@ -52,7 +52,7 @@
   }
 }
 
-.main .greet span {
+.main .main-greet span {
   background: -webkit-linear-gradient(16deg, #74b9ff, #ff7675, #f9ca24);
   background-size: 200% 200%;
   -webkit-background-clip: text;
