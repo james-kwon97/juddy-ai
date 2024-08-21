@@ -40,7 +40,7 @@ const Main = () => {
     <div className="main">
       <div className="nav">
         <p onClick={newChat} style={{ cursor: 'pointer' }}>
-          Juddy
+          Juddy AI
         </p>
         <UserButton appearance={userButtonAppearance} />
       </div>

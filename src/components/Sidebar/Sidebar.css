@@ -3,12 +3,24 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f0f4f9;
+  background-color: #ebeced;
   padding: 25px 15px;
+}
+
+.menu {
+  margin-top: 7px;
+  width: 0px;
+  height: 40px;
+
+  position: relative;
 }
 
 .sidebar img {
   width: 20px;
+}
+
+.sidebar .top img {
+  padding-top: ;
 }
 
 .sidebar .menu {
@@ -23,11 +35,15 @@
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  background-color: #e6eaf1;
+  background-color: white;
   border-radius: 50px;
   font-size: 14px;
-  color: grey;
+  color: black;
   cursor: pointer;
+}
+
+.sidebar .new-chat img {
+  filter: invert(1) brightness(0);
 }
 
 .sidebar .recent {

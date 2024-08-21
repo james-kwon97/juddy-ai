@@ -3,15 +3,17 @@
   min-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
+  background-color: #f4f5f6;
 }
 
 .main .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 25px;
-  padding: 20px;
-  color: #585858;
+  padding: 24px 30px;
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
 }
 
 .main .nav img {
@@ -20,21 +22,21 @@
 }
 
 .main-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
 }
 
 .main .main-greet {
   margin: 50px 0px;
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 500;
   padding: 20px;
   text-align: center;
 }
 
 .main-greet-subtext {
-  font-size: 56px;
-  color: #a0b0b9;
+  font-size: 35px;
+  color: #9f9f9f;
   font-weight: 400;
   margin-top: 10px;
   text-align: center;
@@ -63,33 +65,38 @@
 
 .main .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 16px;
+  justify-content: center;
   padding: 20px;
 }
 
 .main .card {
-  height: 200px;
-  padding: 15px;
-  background-color: #f0f4f9;
-  border-radius: 10px;
+  height: 250px;
+  width: 250px;
+  padding: 22px 30px;
+  background-color: white;
+  border-radius: 40px;
   position: relative;
   cursor: pointer;
 }
 
 .main .card img {
-  width: 35px;
-  padding: 5px;
+  width: 40px;
+  padding: 9px;
+  margin: 12px 19px;
   position: absolute;
   background-color: white;
   border-radius: 20px;
   bottom: 10px;
   right: 10px;
+  filter: invert(1);
 }
 
 .main .card p {
-  color: #585858;
-  font-size: 17px;
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .main .card:hover {
@@ -100,9 +107,10 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 0px 20px;
   margin: auto;
+  text-align: center;
 }
 
 .search-box {
@@ -110,7 +118,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  background-color: #f0f4f9;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 50px;
 }
@@ -135,11 +143,17 @@
   gap: 15px;
 }
 
+.search-box input::placeholder {
+  color: #9f9f9f;
+  font-weight: 300;
+}
+
 .main .bottom-info {
   font-size: 13px;
   margin: 15px auto;
   text-align: center;
   font-weight: 300;
+  color: #9f9f9f;
 }
 
 .result {
@@ -188,7 +202,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #74b9ff; /* Soft Blue */
+  background-color: #74b9ff;
   border-radius: 50%;
   top: 0;
   left: 50%;
@@ -211,7 +225,7 @@
 @media (max-width: 600px) {
   .main-bottom input {
     flex: none;
-    width: 150px;
+    width: 170px;
   }
   .main-bottom img {
     width: 20px;

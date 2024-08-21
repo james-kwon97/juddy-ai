@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: #f4f5f6;
   overflow: hidden;
 }
 
@@ -18,14 +18,14 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 400;
   color: black;
 }
 
 .landing-image {
   position: absolute;
-  left: 18%;
+  left: 25%;
   top: 50%;
   transform: translateY(-50%);
   width: 680px;
@@ -43,11 +43,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 100px 60px;
+  padding: 100px 125px;
 }
 
 .content {
-  max-width: 80%;
+  max-width: 100%;
   margin-left: 0;
   text-align: left;
   margin-top: 190px;
