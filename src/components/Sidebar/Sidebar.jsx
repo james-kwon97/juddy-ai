@@ -1,17 +1,21 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import './Sidebar.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false)
-  const { onSent, previousPrompts, setRecentPrompt, newChat } =
+  const { onSent, previousPrompts, setRecentPrompt, newChat, currentPrompt } =
     useContext(Context)
 
   const loadPrompt = async (prompt) => {
     setRecentPrompt(prompt)
     await onSent(prompt)
   }
+
+  // Combine current prompt with previous prompts, removing duplicates
+  const allPrompts = [currentPrompt, ...previousPrompts].filter(Boolean)
+  const uniquePrompts = [...new Set(allPrompts)]
 
   return (
     <div className="sidebar">
@@ -29,7 +33,8 @@ const Sidebar = () => {
         {extended ? (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            {previousPrompts.map((item, index) => {
+            {uniquePrompts.map((item, index) => {
+              if (!item) return null
               return (
                 <div
                   onClick={() => loadPrompt(item)}
@@ -40,7 +45,7 @@ const Sidebar = () => {
                     src={assets.message_icon}
                     alt="Message icon representing a recent prompt"
                   />
-                  <p>{item.slice(0, 18)}..</p>
+                  <p>{item.slice(0, 20)}..</p>
                 </div>
               )
             })}
