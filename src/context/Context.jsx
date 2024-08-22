@@ -1,9 +1,9 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useCallback } from 'react'
 import runChat from '../config/juddy'
 
 export const Context = createContext()
 
-const ContextProvider = (props) => {
+const ContextProvider = ({ children }) => {
   const [input, setInput] = useState('')
   const [recentPrompt, setRecentPrompt] = useState('')
   const [previousPrompts, setPreviousPrompts] = useState([])
@@ -11,58 +11,56 @@ const ContextProvider = (props) => {
   const [loading, setLoading] = useState(false)
   const [resultData, setResultData] = useState('')
 
-  const delayPara = (index, nextWord) => {
-    setTimeout(function () {
+  const delayPara = useCallback((index, nextWord) => {
+    setTimeout(() => {
       setResultData((prev) => prev + nextWord)
     }, 75 * index)
-  }
+  }, [])
 
-  const newChat = () => {
+  const newChat = useCallback(() => {
     setLoading(false)
     setShowResult(false)
-  }
+  }, [])
 
-  const addPrompt = (prompt) => {
+  const addPrompt = useCallback((prompt) => {
     setPreviousPrompts((prev) => [prompt, ...prev])
-  }
+  }, [])
 
-  const onSent = async (prompt) => {
-    setResultData('')
-    setLoading(true)
-    setShowResult(true)
+  const processResponse = useCallback((response) => {
+    const boldRegex = /\*\*(.*?)\*\*/g
+    const processedResponse = response
+      .replace(boldRegex, '<b>$1</b>')
+      .replace(/\*/g, '<br/>')
+    return processedResponse.split(' ')
+  }, [])
 
-    let response
+  const onSent = useCallback(
+    async (prompt) => {
+      setResultData('')
+      setLoading(true)
+      setShowResult(true)
 
-    if (prompt !== undefined) {
-      response = await runChat(prompt)
-      setRecentPrompt(prompt)
-      addPrompt(prompt)
-    } else {
-      setPreviousPrompts((prev) => [...prev, input])
-      setRecentPrompt(input)
-      response = await runChat(input)
-      addPrompt(input)
-    }
+      const chatPrompt = prompt || input
+      setRecentPrompt(chatPrompt)
+      addPrompt(chatPrompt)
 
-    let responseArray = response.split('**')
-    let newResponse = ''
+      try {
+        const response = await runChat(chatPrompt)
+        const processedResponse = processResponse(response)
 
-    for (let i = 0; i < responseArray.length; i++) {
-      if (i === 0 || i % 2 !== 1) {
-        newResponse += responseArray[i]
-      } else {
-        newResponse += '<b>' + responseArray[i] + '</b>'
+        processedResponse.forEach((word, index) => {
+          delayPara(index, word + ' ')
+        })
+      } catch (error) {
+        console.error('Error running chat:', error)
+        setResultData('An error occurred while processing your request.')
+      } finally {
+        setLoading(false)
+        setInput('')
       }
-    }
-    let newResponse2 = newResponse.split('*').join('</br>')
-    let newResponseArray = newResponse2.split(' ')
-    for (let i = 0; i < newResponseArray.length; i++) {
-      const nextWord = newResponseArray[i]
-      delayPara(i, nextWord + ' ')
-    }
-    setLoading(false)
-    setInput('')
-  }
+    },
+    [input, addPrompt, delayPara, processResponse]
+  )
 
   const contextValue = {
     previousPrompts,
@@ -78,9 +76,8 @@ const ContextProvider = (props) => {
     newChat,
     addPrompt,
   }
-  return (
-    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
-  )
+
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>
 }
 
 export default ContextProvider
