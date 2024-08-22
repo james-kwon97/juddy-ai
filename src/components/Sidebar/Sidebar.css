@@ -65,7 +65,7 @@
   position: relative;
 }
 
-.sidebar .recent-entry .delete-icon {
+.sidebar .recent-entry .remove-icon {
   width: 20px;
   position: absolute;
   right: 10px;
@@ -73,10 +73,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent; /* No background color, keeping it clean */
+  border: none;
 }
 
 .sidebar .recent-entry .delete-icon::after {
-  content: 'Delete';
+  content: 'Remove';
   position: absolute;
   top: -100%;
   right: 0;
@@ -96,10 +98,6 @@
   opacity: 0.6;
   visibility: visible;
   transition-delay: 0s;
-}
-
-.sidebar .recent-entry .delete-icon img {
-  width: 15px;
 }
 
 .sidebar .recent-entry:hover {

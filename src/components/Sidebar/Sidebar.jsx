@@ -19,11 +19,15 @@ const Sidebar = () => {
     await onSent(prompt)
   }
 
-  const deletePrompt = (promptToDelete) => {
+  const removePrompt = (promptToRemove) => {
     const updatedPrompts = previousPrompts.filter(
-      (prompt) => prompt !== promptToDelete
+      (prompt) => prompt !== promptToRemove
     )
     setPreviousPrompts(updatedPrompts)
+  }
+
+  const removeAllPrompts = () => {
+    setPreviousPrompts([])
   }
 
   const allPrompts = [currentPrompt, ...previousPrompts].filter(Boolean)
@@ -57,8 +61,8 @@ const Sidebar = () => {
                       <p>{item.slice(0, 18)}..</p>
                     </div>
                     <button
-                      className="delete-icon"
-                      onClick={() => deletePrompt(item)}
+                      className="remove-icon"
+                      onClick={() => removePrompt(item)}
                     >
                       <img
                         src={assets.remove_icon}
@@ -73,7 +77,7 @@ const Sidebar = () => {
         ) : null}
       </div>
       <div className="bottom">
-        <div className="bottom-item recent-entry">
+        <div className="bottom-item recent-entry" onClick={removeAllPrompts}>
           <img
             src={assets.trash_icon}
             alt="Rubbish bin icon to remove all recent prompts"
