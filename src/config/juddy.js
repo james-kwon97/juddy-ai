@@ -4,7 +4,6 @@ import {
   HarmBlockThreshold,
 } from '@google/generative-ai'
 
-// Use the environment variable for the API key
 const apiKey = import.meta.env.VITE_GEMINI_PUBLIC_KEY
 const genAI = new GoogleGenerativeAI(apiKey)
 

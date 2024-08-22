@@ -121,6 +121,8 @@
   background-color: white;
   padding: 10px 20px;
   border-radius: 50px;
+  width: 90%;
+  margin: auto;
 }
 
 .search-box img {
@@ -225,7 +227,7 @@
 @media (max-width: 600px) {
   .main-bottom input {
     flex: none;
-    width: 170px;
+    width: 160px;
   }
   .main-bottom img {
     width: 20px;
