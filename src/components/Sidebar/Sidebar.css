@@ -5,22 +5,18 @@
   justify-content: space-between;
   background-color: #ebeced;
   padding: 25px 15px;
+  font-size: 17px;
 }
 
 .menu {
   margin-top: 7px;
-  width: 0px;
+  width: 50px;
   height: 40px;
-
   position: relative;
 }
 
 .sidebar img {
   width: 20px;
-}
-
-.sidebar .top img {
-  padding-top: ;
 }
 
 .sidebar .menu {
@@ -37,7 +33,7 @@
   padding: 10px 15px;
   background-color: white;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 17px;
   color: black;
   cursor: pointer;
 }
@@ -59,13 +55,55 @@
 
 .sidebar .recent-entry {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 10px;
   padding: 10px;
-  padding-right: 40px;
+  padding-right: 50px;
   border-radius: 50px;
   color: #282828;
   cursor: pointer;
+  position: relative;
+}
+
+.sidebar .recent-entry img {
+  width: 20px;
+}
+
+.sidebar .recent-entry .delete-icon {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .recent-entry .delete-icon::after {
+  content: 'Delete';
+  position: absolute;
+  top: -100%;
+  right: 0;
+  transform: translateY(-100%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease-in-out;
+  font-size: 12px;
+}
+
+.sidebar .recent-entry .delete-icon:hover::after {
+  opacity: 0.6;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.sidebar .recent-entry .delete-icon img {
+  width: 15px;
 }
 
 .sidebar .recent-entry:hover {
