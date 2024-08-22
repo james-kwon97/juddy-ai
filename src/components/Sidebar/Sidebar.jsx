@@ -77,6 +77,7 @@ const Sidebar = () => {
           <img
             src={assets.trash_icon}
             alt="Rubbish bin icon to remove all recent prompts"
+            className="trash-icon"
           />
           {extended ? <p>Remove all recents</p> : null}
         </div>

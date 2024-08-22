@@ -65,10 +65,6 @@
   position: relative;
 }
 
-.sidebar .recent-entry img {
-  width: 20px;
-}
-
 .sidebar .recent-entry .delete-icon {
   width: 20px;
   position: absolute;
@@ -117,6 +113,13 @@
 
 .sidebar .bottom-item {
   padding-right: 10px;
+  cursor: pointer;
+}
+
+.trash-icon {
+  border-radius: 50px;
+  width: 40px !important;
+  height: auto !important;
   cursor: pointer;
 }
 
