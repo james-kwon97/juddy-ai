@@ -9,10 +9,17 @@
 }
 
 .menu {
-  margin-top: 7px;
-  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
-  position: relative;
+  cursor: pointer;
+  transform: translateX(6px);
+}
+
+.menu img {
+  width: 100%;
+  height: auto;
 }
 
 .sidebar img {
@@ -73,7 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; /* No background color, keeping it clean */
+  background: transparent;
   border: none;
 }
 
