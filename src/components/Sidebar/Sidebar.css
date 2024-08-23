@@ -121,6 +121,10 @@
   cursor: pointer;
 }
 
+.sidebar .bottom-item p {
+  color: #ff6f61;
+}
+
 .trash-icon {
   border-radius: 50px;
   width: 40px !important;
