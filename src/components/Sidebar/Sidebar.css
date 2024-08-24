@@ -18,18 +18,12 @@
 }
 
 .menu img {
-  width: 100%;
-  height: auto;
+  width: 110% !important; /* Ensures that this width is applied */
+  height: auto !important; /* Ensures that height adjusts accordingly */
 }
 
 .sidebar img {
-  width: 20px;
-}
-
-.sidebar .menu {
-  display: block;
-  margin-left: 10px;
-  cursor: pointer;
+  width: 20px; /* Default for other images in the sidebar */
 }
 
 .sidebar .new-chat {
@@ -84,29 +78,6 @@
   border: none;
 }
 
-.sidebar .recent-entry .delete-icon::after {
-  content: 'Remove';
-  position: absolute;
-  top: -100%;
-  right: 0;
-  transform: translateY(-100%);
-  background-color: black;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.1s ease-in-out;
-  font-size: 12px;
-}
-
-.sidebar .recent-entry .delete-icon:hover::after {
-  opacity: 0.6;
-  visibility: visible;
-  transition-delay: 0s;
-}
-
 .sidebar .recent-entry:hover {
   background-color: #e2e6eb;
 }
@@ -123,6 +94,7 @@
 
 .sidebar .bottom-item p {
   color: #ff6f61;
+  font-weight: 300;
 }
 
 .new-chat p {
@@ -131,7 +103,7 @@
 
 .trash-icon {
   border-radius: 50px;
-  width: 40px !important;
+  width: 24px !important;
   height: auto !important;
   cursor: pointer;
 }
