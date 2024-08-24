@@ -15,7 +15,7 @@ import user_icon from './user_icon.png'
 import user_icons from './user_icons.png'
 import plant_icon from './plant_icon.jpeg'
 import remove_icon from './remove_icon.jpeg'
-import trash_icon from './trash_icon.jpeg'
+import trash_icon from './trash_icon.png'
 
 export const assets = {
   history_icon,
