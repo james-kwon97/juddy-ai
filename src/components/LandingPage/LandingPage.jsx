@@ -20,8 +20,8 @@ const LandingPage = () => {
       <div className="left-section">
         <p className="logo">Juddy AI</p>
         <img
-          src={assets.main_icon}
-          alt="Plant image"
+          src={assets.main_gif}
+          alt="Moving bubbles gif with a black background"
           className="landing-image"
         />
       </div>
