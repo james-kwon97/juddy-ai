@@ -12,18 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  transform: translateX(6px);
-}
-
-.menu img {
-  width: 110% !important; /* Ensures that this width is applied */
-  height: auto !important; /* Ensures that height adjusts accordingly */
-}
-
-.sidebar img {
-  width: 20px; /* Default for other images in the sidebar */
+  transform: translateX(10px);
 }
 
 .sidebar .new-chat {
@@ -35,12 +27,14 @@
   background-color: black;
   border-radius: 50px;
   font-size: 17px;
-  color: black;
+  color: white; /* Ensure text color contrasts with the background */
   cursor: pointer;
 }
 
 .sidebar .new-chat img {
   filter: invert(1) brightness(1000%);
+  width: 20px;
+  height: auto;
 }
 
 .sidebar .recent {
@@ -103,8 +97,8 @@
 
 .trash-icon {
   border-radius: 50px;
-  width: 24px !important;
-  height: auto !important;
+  width: 24px;
+  height: auto;
   cursor: pointer;
 }
 
