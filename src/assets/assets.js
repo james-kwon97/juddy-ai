@@ -16,6 +16,7 @@ import user_icons from './user_icons.png'
 import plant_icon from './plant_icon.jpeg'
 import remove_icon from './remove_icon.jpeg'
 import trash_icon from './trash_icon.png'
+import main_icon from './main_icon.jpg'
 
 export const assets = {
   history_icon,
@@ -36,4 +37,5 @@ export const assets = {
   plant_icon,
   remove_icon,
   trash_icon,
+  main_icon,
 }
