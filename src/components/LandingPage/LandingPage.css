@@ -74,7 +74,8 @@
   font-size: 35px;
   color: #9f9f9f;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-top: -10px;
+  margin-bottom: 120px;
   line-height: 150%;
   text-align: left;
 }
@@ -95,7 +96,7 @@
 }
 
 .auth-buttons .log-in {
-  background-color: #333;
+  background-color: black;
   color: white;
 }
 
@@ -107,7 +108,7 @@
 
 .auth-buttons .sign-up {
   background-color: transparent;
-  color: #333;
+  color: black;
   border: 1.5px solid black;
 }
 
