@@ -38,7 +38,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  background-color: white;
+  background-color: black;
   border-radius: 50px;
   font-size: 17px;
   color: black;
@@ -46,7 +46,7 @@
 }
 
 .sidebar .new-chat img {
-  filter: invert(1) brightness(0);
+  filter: invert(1) brightness(1000%);
 }
 
 .sidebar .recent {
@@ -123,6 +123,10 @@
 
 .sidebar .bottom-item p {
   color: #ff6f61;
+}
+
+.new-chat p {
+  color: white;
 }
 
 .trash-icon {
