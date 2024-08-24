@@ -46,6 +46,7 @@
 .sidebar .recent-title {
   margin-top: 30px;
   margin-bottom: 20px;
+  margin-left: 4px;
 }
 
 .sidebar .recent-entry {
@@ -78,7 +79,8 @@
 
 .sidebar .bottom {
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center;
 }
 
 .sidebar .bottom-item {
