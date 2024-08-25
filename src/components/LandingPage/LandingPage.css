@@ -1,3 +1,4 @@
+/* General Page Styles */
 .landing-page {
   position: relative;
   height: 100vh;
@@ -40,8 +41,8 @@
 }
 
 .landing-image {
-  width: 680px;
-  height: 714px;
+  width: 600px; /* Original width */
+  height: 630px; /* Original height */
   border-radius: 30px;
   object-fit: cover;
 }
@@ -75,6 +76,7 @@
   margin-bottom: 10px;
   line-height: 150%;
   text-align: left;
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 .greet span {
@@ -144,5 +146,49 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Updated Media Query for screens 1200px and below */
+@media (max-width: 1200px) {
+  .landing-page {
+    height: 90vh; /* Slightly reduce height */
+  }
+
+  .left-section,
+  .right-section {
+    width: 45%; /* Slightly reduce width */
+  }
+
+  .image-container {
+    left: 22%; /* Adjust to keep centered */
+  }
+
+  .landing-image {
+    width: 450px; /* Slightly smaller width */
+    height: 472px; /* Slightly smaller height */
+  }
+
+  .right-section {
+    padding: 70px 80px; /* Reduce padding proportionally */
+  }
+
+  .content {
+    margin-top: 140px; /* Adjust margin */
+  }
+
+  .greet {
+    font-size: 48px; /* Slightly smaller font size */
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .greet-subtext {
+    font-size: 28px; /* Slightly smaller font size */
+    margin-bottom: 100px;
+  }
+
+  .auth-buttons button {
+    font-size: 18px; /* Slightly smaller button font size */
+    padding: 12px 34px; /* Adjust padding proportionally */
   }
 }
