@@ -68,12 +68,16 @@
   grid-template-columns: repeat(auto-fill, 250px);
   gap: 16px;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .main .card {
   height: 250px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   padding: 22px 30px;
   background-color: white;
   border-radius: 40px;
@@ -122,6 +126,7 @@
   padding: 10px 20px;
   border-radius: 50px;
   width: 90%;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -137,6 +142,7 @@
   outline: none;
   padding: 8px;
   font-size: 18px;
+  min-width: 0;
 }
 
 .search-box div {
@@ -224,18 +230,65 @@
   }
 }
 
-@media (max-width: 600px) {
-  .main-bottom input {
-    flex: none;
-    width: 160px;
+/* Media Queries */
+@media (max-width: 900px) {
+  .main .main-greet {
+    font-size: 48px;
   }
-  .main-bottom img {
-    width: 20px;
+
+  .main-greet-subtext {
+    font-size: 28px;
   }
+
   .search-box {
-    padding: 5px 10px;
+    width: 100%;
+    max-width: 600px;
   }
-  .search-box div {
-    gap: 5px;
+
+  .main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .main .main-greet {
+    font-size: 36px;
+  }
+
+  .main-greet-subtext {
+    font-size: 24px;
+  }
+
+  .main .nav {
+    padding: 20px;
+  }
+
+  .main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .search-box {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main .main-greet {
+    font-size: 28px;
+  }
+
+  .main-greet-subtext {
+    font-size: 20px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 15px;
+  }
+
+  .main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
