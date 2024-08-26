@@ -89,9 +89,9 @@ body {
 .main .card {
   height: 205px;
   width: 205px;
-  padding: 22px 30px;
+  padding: 18px 28px;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 30px;
   position: relative;
   cursor: pointer;
   box-sizing: border-box;
