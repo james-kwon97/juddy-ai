@@ -30,8 +30,8 @@ const Main = () => {
   const userButtonAppearance = {
     elements: {
       userButtonAvatarBox: {
-        width: '35px',
-        height: '35px',
+        width: '30px',
+        height: '30px',
       },
     },
   }

@@ -23,11 +23,11 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 15px;
+  padding: 8px 12px;
   background-color: black;
   border-radius: 50px;
-  font-size: 17px;
-  color: white; /* Ensure text color contrasts with the background */
+  font-size: 16px;
+  color: white;
   cursor: pointer;
 }
 
@@ -54,23 +54,38 @@
   align-items: center;
   gap: 10px;
   padding: 10px;
-  padding-right: 50px;
   border-radius: 50px;
   color: #282828;
   cursor: pointer;
   position: relative;
 }
 
+.sidebar .recent-entry .recent-content {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .sidebar .recent-entry .remove-icon {
   width: 20px;
-  position: absolute;
-  right: 10px;
+  height: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ebeced;
   background: transparent;
   border: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.sidebar .recent-entry .remove-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: contain;
 }
 
 .sidebar .recent-entry:hover {
@@ -79,7 +94,7 @@
 
 .sidebar .bottom {
   display: flex;
-  justify-content: center; /* Center the icon horizontally */
+  justify-content: center;
   align-items: center;
 }
 
@@ -99,7 +114,7 @@
 
 .trash-icon {
   border-radius: 50px;
-  width: 24px;
+  width: 20px;
   height: auto;
   cursor: pointer;
 }
