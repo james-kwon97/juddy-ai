@@ -39,6 +39,23 @@ const safetySettings = [
 ]
 
 async function runChat(prompt) {
+  const normalizedPrompt = prompt.toLowerCase()
+
+  const identityPhrases = [
+    'what is your name',
+    "what's your name",
+    'tell me your name',
+    'what do they call you',
+    'who is this',
+    'what are you called',
+    'your name',
+    "what's your identity",
+  ]
+
+  if (identityPhrases.some((phrase) => normalizedPrompt.includes(phrase))) {
+    return 'My name is Juddy.'
+  }
+
   const chatSession = model.startChat({
     generationConfig,
     safetySettings,
