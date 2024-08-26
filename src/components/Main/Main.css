@@ -35,7 +35,7 @@ body {
 .main-container {
   max-width: 1200px;
   margin: auto;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .main .main-greet {
@@ -111,8 +111,8 @@ body {
 
 .main .card p {
   color: black;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 140%;
   margin: 0;
 }
@@ -140,7 +140,7 @@ body {
   padding: 8px 16px;
   border-radius: 50px;
   width: 90%;
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
 }
 

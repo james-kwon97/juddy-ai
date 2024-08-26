@@ -15,7 +15,7 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transform: translateX(7px);
+  transform: translateX(5px);
 }
 
 .sidebar .new-chat {
@@ -33,7 +33,7 @@
 
 .sidebar .new-chat img {
   filter: invert(1) brightness(1000%);
-  width: 20px;
+  width: 16px;
   height: auto;
 }
 
