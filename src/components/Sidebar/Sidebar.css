@@ -132,6 +132,7 @@
   .menu {
     width: 28px;
     height: 28px;
+    transform: translateX(4px);
   }
 
   .sidebar .new-chat {
@@ -224,6 +225,7 @@
   .menu {
     width: 24px;
     height: 24px;
+    transform: translateX(2px);
   }
 
   .sidebar .new-chat {
