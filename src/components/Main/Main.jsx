@@ -81,7 +81,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card"
+                className="card third-card"
                 onClick={() =>
                   handleCardClick(
                     'Provide a list of healthy recipes for a week'
