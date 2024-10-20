@@ -246,138 +246,45 @@ body {
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  .main-container {
-    padding: 0 20px;
-  }
-
-  .main .main-greet {
-    font-size: 54px;
-  }
-
-  .main-greet-subtext {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .main .main-greet {
-    font-size: 48px;
-    margin: 40px 0;
-  }
-
-  .main-greet-subtext {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 880px) {
-  .main .cards {
-    max-width: 630px;
-  }
-}
-
-@media (max-width: 768px) {
-  .main .nav {
-    padding: 20px;
-    font-size: 20px;
-  }
-
   .main .main-greet {
     font-size: 42px;
-    margin: 30px 0;
   }
 
   .main-greet-subtext {
     font-size: 24px;
   }
-
-  .search-box {
-    padding: 8px 16px;
-  }
-
-  .search-box input {
-    font-size: 16px;
-  }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 992px) {
   .main .cards {
-    max-width: 420px;
-  }
-}
-
-@media (max-width: 600px) {
-  .main .nav {
-    padding: 16px;
-    font-size: 18px;
+    grid-template-columns: repeat(3, 175px);
   }
 
-  .main .main-greet {
-    font-size: 36px;
-    margin: 24px 0;
+  .main .card {
+    height: 175px;
+    width: 175px;
+    padding: 16px 22px;
   }
 
-  .main-greet-subtext {
-    font-size: 20px;
-  }
-
-  .search-box {
-    width: 95%;
-    padding: 6px 12px;
-  }
-
-  .search-box input {
-    font-size: 14px;
-  }
-
-  .main .bottom-info {
-    font-size: 11px;
-  }
-
-  .result-title p,
-  .result-data p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main .nav {
-    padding: 12px;
-    font-size: 16px;
-  }
-
-  .main .main-greet {
-    font-size: 30px;
-    margin: 20px 0;
-  }
-
-  .main-greet-subtext {
-    font-size: 18px;
-  }
-
-  .main .cards {
-    max-width: 205px;
-  }
-
-  .search-box {
-    width: 100%;
-    padding: 5px 10px;
-  }
-
-  .search-box input {
+  .main .card p {
     font-size: 13px;
   }
 
-  .main .bottom-info {
-    font-size: 10px;
+  .main .card img {
+    width: 30px;
   }
 
-  .result-title p,
-  .result-data p {
+  .main .main-greet {
+    font-size: 38px;
+  }
+
+  .main-greet-subtext {
+    font-size: 22px;
+  }
+
+  .search-box input {
+    padding: 4px;
     font-size: 14px;
-  }
-
-  .result img {
-    width: 40px;
+    min-width: 0;
   }
 }
