@@ -95,7 +95,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card"
+                className="card fourth-card"
                 onClick={() =>
                   handleCardClick(
                     'Give tips on how to improve productivity while working from home'
