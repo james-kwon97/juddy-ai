@@ -69,7 +69,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card second-card"
+                className="card"
                 onClick={() =>
                   handleCardClick('Recommend the best books to read this year')
                 }
