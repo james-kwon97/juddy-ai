@@ -12,12 +12,6 @@ if (!PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key')
 }
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <ContextProvider>
-//     <App />
-//   </ContextProvider>
-// )
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
