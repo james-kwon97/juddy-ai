@@ -305,3 +305,16 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .main .cards {
+    grid-template-columns: repeat(2, 160px);
+    gap: 10px;
+  }
+
+  .main .card {
+    height: 160px;
+    width: 160px;
+    padding: 12px 18px;
+  }
+}
