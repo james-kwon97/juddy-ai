@@ -106,6 +106,10 @@
 .sidebar .bottom-item p {
   color: #ff6f61;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .new-chat p {
@@ -117,6 +121,140 @@
   width: 20px;
   height: auto;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    padding: 20px 12px;
+    font-size: 16px;
+  }
+
+  .menu {
+    width: 28px;
+    height: 28px;
+    transform: translateX(4px);
+  }
+
+  .sidebar .new-chat {
+    margin-top: 40px;
+    padding: 7px 10px;
+    font-size: 15px;
+  }
+
+  .sidebar .new-chat img {
+    width: 14px;
+  }
+
+  .sidebar .recent-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar .recent-entry {
+    padding: 8px;
+  }
+
+  .sidebar .recent-entry .remove-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .trash-icon {
+    width: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    font-size: 15px;
+  }
+
+  .new-chat p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    padding: 18px 10px;
+  }
+
+  .menu {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sidebar .new-chat {
+    margin-top: 35px;
+    padding: 6px 9px;
+    font-size: 14px;
+  }
+
+  .sidebar .new-chat img {
+    width: 13px;
+  }
+
+  .sidebar .recent-title {
+    margin-top: 22px;
+    margin-bottom: 13px;
+  }
+
+  .sidebar .recent-entry {
+    padding: 7px;
+  }
+
+  .sidebar .recent-entry .remove-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .trash-icon {
+    width: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 15px 8px;
+    font-size: 14px;
+  }
+
+  .menu {
+    width: 24px;
+    height: 24px;
+    transform: translateX(2px);
+  }
+
+  .sidebar .new-chat {
+    margin-top: 30px;
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+
+  .sidebar .new-chat img {
+    width: 12px;
+  }
+
+  .sidebar .recent-title {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  .sidebar .recent-entry {
+    padding: 6px;
+  }
+
+  .sidebar .recent-entry .remove-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .trash-icon {
+    width: 15px;
+  }
 }
 
 @media (max-width: 600px) {

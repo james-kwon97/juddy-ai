@@ -69,7 +69,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card"
+                className="card second-card"
                 onClick={() =>
                   handleCardClick('Recommend the best books to read this year')
                 }
@@ -81,7 +81,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card"
+                className="card third-card"
                 onClick={() =>
                   handleCardClick(
                     'Provide a list of healthy recipes for a week'
@@ -95,7 +95,7 @@ const Main = () => {
                 />
               </div>
               <div
-                className="card"
+                className="card fourth-card"
                 onClick={() =>
                   handleCardClick(
                     'Give tips on how to improve productivity while working from home'
