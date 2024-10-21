@@ -293,3 +293,15 @@ body {
     min-width: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .main .cards {
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
+  }
+
+  .main .card.third-card,
+  .main .card.fourth-card {
+    display: none;
+  }
+}
