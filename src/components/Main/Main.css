@@ -25,6 +25,10 @@ body {
   font-weight: 500;
   line-height: 140%;
   color: black;
+  background-color: #f4f5f6; /* Match the main background color */
+  position: sticky; /* Add this */
+  top: 0; /* Add this */
+  z-index: 10; /* Add this */
 }
 
 .main .nav img {
@@ -287,6 +291,23 @@ body {
     font-size: 22px;
   }
 
+  .result-title,
+  .result-data {
+    margin: 30px 0px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .result-title p,
+  .result-data p {
+    font-size: 16px;
+  }
+
+  .result img {
+    width: 32px;
+  }
+
   .search-box input {
     padding: 4px;
     font-size: 14px;
@@ -316,5 +337,14 @@ body {
     height: 160px;
     width: 160px;
     padding: 12px 18px;
+  }
+
+  .result {
+    padding: 40px 5%;
+  }
+
+  .result-title p,
+  .result-data p {
+    font-size: 14px;
   }
 }
